@@ -5,8 +5,8 @@ uses crt;
 var
   opcion: integer;
 
+procedure menuprincipal;
 begin
-  repeat
     clrscr;
     writeln('========================================');
     writeln('         MENU PRINCIPAL  FRCU           ');
@@ -18,11 +18,19 @@ begin
     writeln('  0 - Salir                             ');
     writeln('========================================');
     write('  Ingrese una opcion: ');
-    readln(opcion);
-    if (opcion < 0) and (opcion > 4) then
-    begin
-    writeln('Ingrese una opcion valida');
-    readln(opcion);
+end;
+
+
+
+begin
+  repeat
+  menuprincipal;
+  readln(opcion);
+  case opcion of
+  1: gestioncapacitaciones ;
+  2: gestionalumnos ;
+  3: menulistados ;
+  4: menuestadisticas ;
 until opcion = 0;
   clrscr;
   writeln('Saliendo del sistema. Hasta luego!');
