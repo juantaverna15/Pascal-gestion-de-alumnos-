@@ -1,7 +1,8 @@
 program SistemaFRCU;
-
 uses crt;
 
+{Menu principal  no mucho mas que aclarar tenemos los procedures de cada menu separado con su interfaz grafica
+ con un repeat y un readln hasta que apreten 0}
 var
   opcion: integer;
 
@@ -20,7 +21,23 @@ begin
     write('  Ingrese una opcion: ');
 end;
 
+procedure gestioncapacitaciones;
+begin
+    writeln('========================================');
+    writeln('      Gestion Capacitaciones  FRCU      ');
+    writeln('========================================');
+    writeln('                                        ');
+    writeln('Ingrese codigo de capacitación>         ');
+end;
 
+procedure gestionalumnos;
+begin
+    writeln('========================================');
+    writeln('      Gestion Alumnos  FRCU             ');
+    writeln('========================================');
+    writeln('                                        ');
+    writeln('Ingrese codigo de capacitación>         ');
+end;
 
 begin
   repeat
